@@ -59,7 +59,7 @@ export default function renderToString(vnode, context, opts, inner, isSvgMode) {
 		indentChar = typeof pretty==='string' ? pretty : '\t';
 
 	if (vnode==null || vnode===false) {
-		return '';
+		return opts.emptyString || "";
 	}
 
 	// #text nodes
